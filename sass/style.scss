@@ -1,0 +1,188 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+/* antialiasing mode font rendering */
+/* mixin defined */
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Responsive design */
+
+// break points
+$S:     480px;   
+$M:     600px;     
+$L:     1170px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+
+/* variables defined */
+
+// colors
+
+ // Skill
+ $color-skill: #F2EACF;
+
+// fonts 
+
+$primary-font:'Bitter', serif;
+$secondary-font: 'PT Sans', sans-serif;
+
+/*
+ *  1. Primary Style
+ *  2. Intro
+ *  3. AboutMe
+ *  4. Skill
+ *  5. Projects
+ *  6. Contact Me
+ */
+
+
+/* ---------------------------
+
+Primary style
+
+------------------------------*/
+
+*, *::after, *::before {
+	@include box-sizing(border-box);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font: {
+		size: 1.6rem;
+		family: $primary-font; 
+	}
+}
+
+@include MQ(L) {
+	body, html{
+		overflow-x: hidden;
+	}
+}
+
+
+/*****************************
+
+Skill section
+
+******************************/
+
+.skill-container {
+	position: relative;
+	width: 90%;
+	max-width: $L;
+	margin: 0 auto;
+	padding-top: 100px;
+	border: 1px solid red;
+	heigth: 100%;	
+
+	@include MQ(L) {
+		h1 {
+			font-size: 8rem;
+			text-align: center;
+			//border: 1px solid yellow;
+					
+		}
+
+		.skill-column {
+			//border: 1px solid tomato;
+			
+			display: inline-block;
+			position: relative;
+			width: 33%;
+			height: 500px;
+			padding-top: 50px;
+			paddint-bottom: 300px;
+			text-align: center;
+			vertical-align:top;
+			margin-top: 100px;
+		}
+
+		h2{
+			font-size: 4rem;
+			&:hover{
+				color: tomato;
+
+			}
+		}
+		p{
+			margin-top: 50px;
+			padding: 50px 0;
+			font-size: 3rem;
+
+			opacity: 1;
+		}
+
+		.no-visible {
+			display: none;
+		}
+
+		.skill-list ul {
+			position: absolute;
+			left: 50%;
+			@include transform(translateX(-50%));
+			top: 150px;
+
+			li {
+				font-size: 3rem;
+				margin-top: 1.5rem;
+			}
+
+
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
