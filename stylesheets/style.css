@@ -116,7 +116,6 @@ Skill section
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 100px;
-  border: 1px solid red;
   heigth: 100%;
 }
 @media only screen and (min-width: 1170px) {
@@ -156,24 +155,29 @@ Skill section
     font-size: 3rem;
     opacity: 1;
   }
-  /* line 139, ../sass/style.scss */
-  .skill-container .no-visible {
-    display: none;
-  }
-  /* line 145, ../sass/style.scss */
+  /* line 142, ../sass/style.scss */
   .skill-container .skill-list ul {
     position: absolute;
-    opacity: 1;
-    left: 50%;
+    left: 10%;
+    top: 150px;
+    opacity: 0;
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    top: 150px;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
-  /* line 154, ../sass/style.scss */
+  /* line 151, ../sass/style.scss */
   .skill-container .skill-list ul li {
     font-size: 3rem;
     margin-top: 1.5rem;
+  }
+  /* line 158, ../sass/style.scss */
+  .skill-container .skill-list.visible ul {
+    opacity: 1;
+    left: 50%;
   }
 }

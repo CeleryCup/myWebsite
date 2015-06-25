@@ -22,13 +22,16 @@ $(document).ready(function() {
 			    $('h2').mouseenter(function(){
 			    	var selected = $(this).next();
 			    	selected.css('opacity' , 0);
-			    	$(this).parent().find('.skill-list').removeClass('no-visible');
+			    	$(this).parent().find('.skill-list').addClass('visible');
 			    });
 
 			    $('h2').mouseout(function(){
 			    	var selected = $(this).next();
-			    	selected.css('opacity', 1);
-					$(this).parent().find('.skill-list').addClass('no-visible');
+			    	setTimeout(function(){
+			    		selected.css('opacity', 1);
+			    	}, 600);
+			    	
+					$(this).parent().find('.skill-list').removeClass('visible');
 			    });
 
 

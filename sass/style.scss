@@ -94,7 +94,7 @@ Skill section
 	max-width: $L;
 	margin: 0 auto;
 	padding-top: 100px;
-	border: 1px solid red;
+	
 	heigth: 100%;	
 
 	@include MQ(L) {
@@ -132,32 +132,46 @@ Skill section
 			margin-top: 50px;
 			padding: 50px 0;
 			font-size: 3rem;
-
 			opacity: 1;
 		}
+		
+		
 
-		.no-visible {
-			display: none;
+		.skill-list{ 
 			
-			
-		}
+			ul {
+				
+				position: absolute;
+				left: 10%;
+				top: 150px;
+				opacity: 0;
+				@include transform(translateX(-50%));
+				@include transition(all 0.5s ease-in-out);
 
-		.skill-list ul {
-			position: absolute;
-			opacity: 1;
-			left: 50%;
-			@include transform(translateX(-50%));
-			top: 150px;
-			
-			
-
-			li {
+				li {
 				font-size: 3rem;
 				margin-top: 1.5rem;
+				}
 			}
 
+			&.visible {
+				ul {
+					opacity: 1;
+					left: 50%;
+				}
+			}
+			
+
+
+			
+
+
+			
+		
 
 		}
+
+
 	}
 
 
