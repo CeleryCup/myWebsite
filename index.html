@@ -9,7 +9,8 @@
 
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />	
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+	<link rel="stylesheet" href="stylesheets/animate.css">
 	<link rel="stylesheet" href="stylesheets/style.css"> <!-- Resource style -->
 	
 
@@ -17,16 +18,73 @@
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/morphtext.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<title>Qiang's WebPage</title>
 </head>
 <body>
 
 <div id="fullpage">
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
-    <div class="section">Some section</div>
+    <div class="section" id="intro">
+    	Some section
+    </div>
+
+    <div class="section" id="aboutMe">
+    	Some section
+    </div>
+    
+    <div class="section active" id="skill">
+    	
+    	<div class="skill-container">
+    		<h1>I am ...</h1>
+
+    		<div class="skill-column">
+    			<h2>Experienced in</h2>
+    			<p class="text-change">HTML5/CSS3,JavaScript,jQuery,Sass/Less,Compass</p>
+    			<div class="skill-list no-visible">
+    				<ul>
+    					<li>HTML5/CSS</li>
+    					<li>JavaScript</li>
+    					<li>jQueryjQuery</li>
+    					<li>Sass/Less</li>
+    					<li>Compass</li>
+    				</ul>
+    			</div>
+    		</div>
+
+			<div class="skill-column">
+				<h2>Good At</h2>
+				<p class="text-change">AngularJs, Test</p>
+				<div class="skill-list no-visible">
+					<ul>
+						<li>AngularJS</li>
+						<li>Test</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="skill-column">
+				<h2>Currently learning</h2>
+				<p class="text-change">NodeJS, MongoDB</p>
+				<div class="skill-list no-visible">
+					<ul>
+						<li>NodeJS</li>
+						<li>Express</li>
+						<li>MongoDB</li>
+						
+					</ul>
+				</div>
+			</div>
+    	
+    	</div>
+    </div>
+
+    <div class="section" id="projects">
+    	Some section
+    </div>
+    <div class="section" id="contactMe">
+    	Some section
+    </div>
 </div>
 
 </body>
