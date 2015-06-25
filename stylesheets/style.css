@@ -140,25 +140,30 @@ Skill section
   /* line 122, ../sass/style.scss */
   .skill-container h2 {
     font-size: 4rem;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
-  /* line 124, ../sass/style.scss */
+  /* line 126, ../sass/style.scss */
   .skill-container h2:hover {
     color: tomato;
   }
-  /* line 129, ../sass/style.scss */
+  /* line 131, ../sass/style.scss */
   .skill-container p {
     margin-top: 50px;
     padding: 50px 0;
     font-size: 3rem;
     opacity: 1;
   }
-  /* line 137, ../sass/style.scss */
+  /* line 139, ../sass/style.scss */
   .skill-container .no-visible {
     display: none;
   }
-  /* line 141, ../sass/style.scss */
+  /* line 145, ../sass/style.scss */
   .skill-container .skill-list ul {
     position: absolute;
+    opacity: 1;
     left: 50%;
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -166,7 +171,7 @@ Skill section
     transform: translateX(-50%);
     top: 150px;
   }
-  /* line 147, ../sass/style.scss */
+  /* line 154, ../sass/style.scss */
   .skill-container .skill-list ul li {
     font-size: 3rem;
     margin-top: 1.5rem;

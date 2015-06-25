@@ -121,9 +121,11 @@ Skill section
 
 		h2{
 			font-size: 4rem;
+
+			@include transition(all 0.5s ease-in-out);
 			&:hover{
 				color: tomato;
-
+			
 			}
 		}
 		p{
@@ -136,13 +138,18 @@ Skill section
 
 		.no-visible {
 			display: none;
+			
+			
 		}
 
 		.skill-list ul {
 			position: absolute;
+			opacity: 1;
 			left: 50%;
 			@include transform(translateX(-50%));
 			top: 150px;
+			
+			
 
 			li {
 				font-size: 3rem;
