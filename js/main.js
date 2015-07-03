@@ -1,11 +1,14 @@
 $(document).ready(function() {
 
 	var hasLoaded = false;
+    $('.info-container ul > li').each(function(){
+       $(this).hide();
+    })
 
     $('#fullpage').fullpage({
     	'verticalCentered': false,
     	'css3': true,
-    	'sectionsColor': ['#3C4F6A', '#F2EACF', '#33435A', '#33435A','#F2EACF','#3d385a'],
+    	'sectionsColor': ['#3C4F6A', '#EAAB28', '#578F7B', '#B74D3F','#F2EACF','#3d385a'],
     	'navigation': true,
     	'navigationPosition': 'right',
     	'navigationTooltips': ['Intro', 'About Me', 'Skills', 'Projects', 'Contact Me'],
@@ -46,7 +49,6 @@ $(document).ready(function() {
     			var delay = 1000;
     			$('.info-container ul > li').each(function(){
     				var that = $(this);
-    				that.hide();
     				setTimeout(function(){
     					that.show();
     					if(that.hasClass('dislike')){

@@ -43,7 +43,7 @@ $L:     1170px;
 $color-1: #3d385a;
 $color-2: #ea4a55;
 $color-3: #ffffff;
-$section2-bg: #F2EACF;
+$section2-bg: #EAAB28;
 
 // fonts 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
@@ -191,11 +191,12 @@ AboutMe section
 			}
 			.date {
 				position: absolute;
-				left: -150px;
+				left: -145px;
 				font-size: 1.5rem;
 				line-height: 25px;
 				top: 50%;
 				margin-top: -10px;
+				font-family:$secondary-font;
 
 			}
 			.circle {
@@ -251,9 +252,11 @@ AboutMe section
 			label{
 				position: absolute;
 				z-index: 10;
-				font-size: 2rem;
+				font-size: 2.2rem;
 				cursor: pointer;
 				top: 10px;
+				font-family:$secondary-font;
+
 				@include transition(all 0.2s linear);
 			}
 
@@ -267,20 +270,20 @@ AboutMe section
 							@include transform(translateX(42px));
 						}
 						.circle{
-							background: #6DBFEF;
+							background: red;
 						}
 					}
 					& ~ .content {
 
 						max-height: 300px;
-						border-color: lighten(#FCB052, 10%);
+						border-color: black;
 						margin-right: 20px;
 						@include transform(translateX(20px));
 						@include transition(max-height 0.4s linear);
 
 						p {
 							max-height: 200px;
-							color: black;	
+							color: lighten(black, 30%);	
 							@include transition(color 0.5s linear);
 						}
 					}
@@ -308,51 +311,66 @@ Skill section
 	padding-top: 100px;
 	
 	heigth: 100%;	
-
-	@include MQ(L) {
-		h1 {
-			font-size: 8rem;
-			text-align: center;
-			//border: 1px solid yellow;
+	h1 {
+		font-size: 8rem;
+		text-align: center;
+		color: white;
+		//border: 1px solid yellow;
 					
 		}
-
-		.skill-column {
-			//border: 1px solid tomato;
-			
+	.skill-column {
 			display: inline-block;
 			position: relative;
-			width: 33%;
-			height: 500px;
+			width: 100%;
 			padding-top: 50px;
-			paddint-bottom: 300px;
 			text-align: center;
 			vertical-align:top;
-			margin-top: 100px;
-		}
+			
 
-		h2{
+	}
+	h2{
+			display: inline-block;
+			width: 60%;
 			font-size: 4rem;
-
+			color: #656E79;
+			background: #E9F0F5;
+			border-radius: 5px;
+			padding: 10px 0;
+			font-family: $secondary-font;
 			@include transition(all 0.5s ease-in-out);
 			&:hover{
-				color: tomato;
+				color: white;
+				background: darken(red, 20%);
 			
 			}
 		}
-		p{
-			margin-top: 50px;
+	p{
+			font-family: $secondary-font;
+			
 			padding: 50px 0;
 			font-size: 3rem;
 			opacity: 1;
 		}
-		
-		
+	.skill-list{
+		display:none;
+	}
+	@include MQ(L) {
+		.skill-column {	
+			width: 33%;
+			margin-top: 5%;
+			height: 500px;
+		}
+		h2{
+			width: 90%;
+		}
+		p{
+			margin-top: 50px;
+		}
 
 		.skill-list{ 
+			display:block;
 			
 			ul {
-				
 				position: absolute;
 				left: 10%;
 				top: 150px;
@@ -363,6 +381,7 @@ Skill section
 				li {
 				font-size: 3rem;
 				margin-top: 1.5rem;
+				font-family: $secondary-font;
 				}
 			}
 
@@ -370,6 +389,7 @@ Skill section
 				ul {
 					opacity: 1;
 					left: 50%;
+
 				}
 			}
 			
@@ -400,18 +420,41 @@ moreAboutMe section
 	width: 90%;
 	position: relative;
 	margin: 0 auto;
-	border: 1px solid red;
+	border: 1px solid transparent;
+
+	h1{
+		margin: 100px auto 0;
+		max-width: 800px;
+		text-align: left;
+		font:{
+				size: 3rem;
+				weight: bold;
+				family: $third-font;
+			}
+
+	}
+
 
 	ul {
-		margin: 200px auto;
-		max-width: 600px;
-
-
+		margin: 50px auto;
+		max-width: 800px;
+		
 		li {
 			display: inline-block;
 			font-size: 3rem;
 			padding: 5px;
-			margin: 15px 10px 0 0;	
+			margin: 15px 10px 0 0;
+			font-family: $secondary-font;
+
+			a{
+				text-decoration: none;
+			}	
+		}
+	}
+
+	@include MQ(L){
+		h1{
+			font-size: 6rem;
 		}
 	}
 }

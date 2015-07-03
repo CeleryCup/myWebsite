@@ -214,33 +214,34 @@ AboutMe section
 /* line 192, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .date {
   position: absolute;
-  left: -150px;
+  left: -145px;
   font-size: 1.5rem;
   line-height: 25px;
   top: 50%;
   margin-top: -10px;
+  font-family: "PT Sans", sans-serif;
 }
-/* line 201, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .circle {
   position: absolute;
   display: block;
   width: 20px;
   height: 20px;
-  background: #F2EACF;
+  background: #EAAB28;
   border: 5px solid white;
   border-radius: 50%;
   top: 50%;
   margin-top: -10px;
   left: -44px;
 }
-/* line 213, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content {
   position: relative;
   max-height: 40px;
   border: 2px solid transparent;
   border-radius: 0.8rem;
 }
-/* line 219, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content::before, .aboutMe-container .timeline-pane #timeline .content::after {
   content: '';
   width: 0;
@@ -250,44 +251,45 @@ AboutMe section
   pointer-events: none;
   right: 100%;
 }
-/* line 228, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content::before {
   border-right-color: inherit;
   border-width: 20px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 236, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content::after {
-  border-right-color: #F2EACF;
+  border-right-color: #EAAB28;
   border-width: 17px;
   top: 50%;
   margin-top: -17px;
 }
-/* line 243, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content p {
   color: transparent;
   text-align: justify;
   hyphens: auto;
   overflow: hidden;
 }
-/* line 251, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline label {
   position: absolute;
   z-index: 10;
-  font-size: 2rem;
+  font-size: 2.2rem;
   cursor: pointer;
   top: 10px;
+  font-family: "PT Sans", sans-serif;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-/* line 260, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio {
   display: none;
 }
-/* line 265, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked + .relative label {
   cursor: auto;
   -moz-transform: translateX(42px);
@@ -295,14 +297,14 @@ AboutMe section
   -webkit-transform: translateX(42px);
   transform: translateX(42px);
 }
-/* line 269, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked + .relative .circle {
-  background: #6DBFEF;
+  background: red;
 }
-/* line 273, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked ~ .content {
   max-height: 300px;
-  border-color: #fdc784;
+  border-color: black;
   margin-right: 20px;
   -moz-transform: translateX(20px);
   -ms-transform: translateX(20px);
@@ -313,10 +315,10 @@ AboutMe section
   -webkit-transition: max-height 0.4s linear;
   transition: max-height 0.4s linear;
 }
-/* line 281, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked ~ .content p {
   max-height: 200px;
-  color: black;
+  color: #4d4d4d;
   -moz-transition: color 0.5s linear;
   -o-transition: color 0.5s linear;
   -webkit-transition: color 0.5s linear;
@@ -328,7 +330,7 @@ AboutMe section
 Skill section
 
 ******************************/
-/* line 303, ../sass/style.scss */
+/* line 306, ../sass/style.scss */
 .skill-container {
   position: relative;
   width: 90%;
@@ -337,44 +339,72 @@ Skill section
   padding-top: 100px;
   heigth: 100%;
 }
+/* line 314, ../sass/style.scss */
+.skill-container h1 {
+  font-size: 8rem;
+  text-align: center;
+  color: white;
+}
+/* line 321, ../sass/style.scss */
+.skill-container .skill-column {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+  vertical-align: top;
+}
+/* line 331, ../sass/style.scss */
+.skill-container h2 {
+  display: inline-block;
+  width: 60%;
+  font-size: 4rem;
+  color: #656E79;
+  background: #E9F0F5;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-family: "PT Sans", sans-serif;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 341, ../sass/style.scss */
+.skill-container h2:hover {
+  color: white;
+  background: #990000;
+}
+/* line 347, ../sass/style.scss */
+.skill-container p {
+  font-family: "PT Sans", sans-serif;
+  padding: 50px 0;
+  font-size: 3rem;
+  opacity: 1;
+}
+/* line 354, ../sass/style.scss */
+.skill-container .skill-list {
+  display: none;
+}
 @media only screen and (min-width: 1170px) {
-  /* line 313, ../sass/style.scss */
-  .skill-container h1 {
-    font-size: 8rem;
-    text-align: center;
-  }
-  /* line 320, ../sass/style.scss */
+  /* line 358, ../sass/style.scss */
   .skill-container .skill-column {
-    display: inline-block;
-    position: relative;
     width: 33%;
+    margin-top: 5%;
     height: 500px;
-    padding-top: 50px;
-    paddint-bottom: 300px;
-    text-align: center;
-    vertical-align: top;
-    margin-top: 100px;
   }
-  /* line 334, ../sass/style.scss */
+  /* line 363, ../sass/style.scss */
   .skill-container h2 {
-    font-size: 4rem;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    width: 90%;
   }
-  /* line 338, ../sass/style.scss */
-  .skill-container h2:hover {
-    color: tomato;
-  }
-  /* line 343, ../sass/style.scss */
+  /* line 366, ../sass/style.scss */
   .skill-container p {
     margin-top: 50px;
-    padding: 50px 0;
-    font-size: 3rem;
-    opacity: 1;
   }
-  /* line 354, ../sass/style.scss */
+  /* line 370, ../sass/style.scss */
+  .skill-container .skill-list {
+    display: block;
+  }
+  /* line 373, ../sass/style.scss */
   .skill-container .skill-list ul {
     position: absolute;
     left: 10%;
@@ -389,12 +419,13 @@ Skill section
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  /* line 363, ../sass/style.scss */
+  /* line 381, ../sass/style.scss */
   .skill-container .skill-list ul li {
     font-size: 3rem;
     margin-top: 1.5rem;
+    font-family: "PT Sans", sans-serif;
   }
-  /* line 370, ../sass/style.scss */
+  /* line 389, ../sass/style.scss */
   .skill-container .skill-list.visible ul {
     opacity: 1;
     left: 50%;
@@ -406,24 +437,44 @@ Skill section
 moreAboutMe section
 
 ******************************/
-/* line 399, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 .info-container {
   width: 90%;
   position: relative;
   margin: 0 auto;
-  border: 1px solid red;
+  border: 1px solid transparent;
 }
-/* line 405, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
+.info-container h1 {
+  margin: 100px auto 0;
+  max-width: 800px;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+/* line 438, ../sass/style.scss */
 .info-container ul {
-  margin: 200px auto;
-  max-width: 600px;
+  margin: 50px auto;
+  max-width: 800px;
 }
-/* line 410, ../sass/style.scss */
+/* line 442, ../sass/style.scss */
 .info-container ul li {
   display: inline-block;
   font-size: 3rem;
   padding: 5px;
   margin: 15px 10px 0 0;
+  font-family: "PT Sans", sans-serif;
+}
+/* line 449, ../sass/style.scss */
+.info-container ul li a {
+  text-decoration: none;
+}
+@media only screen and (min-width: 1170px) {
+  /* line 456, ../sass/style.scss */
+  .info-container h1 {
+    font-size: 6rem;
+  }
 }
 
 /*****************************
@@ -431,7 +482,7 @@ moreAboutMe section
 contactMe section
 
 ******************************/
-/* line 425, ../sass/style.scss */
+/* line 468, ../sass/style.scss */
 .contact-me-container {
   position: relative;
   width: 90%;
@@ -440,24 +491,24 @@ contactMe section
   border: 1px solid red;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 425, ../sass/style.scss */
+  /* line 468, ../sass/style.scss */
   .contact-me-container {
     padding-top: 100px;
     height: 100vh;
   }
-  /* line 435, ../sass/style.scss */
+  /* line 478, ../sass/style.scss */
   .contact-me-container.is-tour {
     height: auto;
     padding-bottom: 100px;
   }
 }
 
-/* line 442, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 .contact-me-intro {
   padding: 50px 0;
   text-align: center;
 }
-/* line 446, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .contact-me-intro h1 {
   margin-bottom: 10px;
   font-size: 2.5rem;
@@ -465,7 +516,7 @@ contactMe section
   font-family: "PT Sans", sans-serif;
   color: #ffffff;
 }
-/* line 453, ../sass/style.scss */
+/* line 496, ../sass/style.scss */
 .contact-me-intro p {
   max-width: 560px;
   margin: 0 auto;
@@ -473,13 +524,13 @@ contactMe section
   font-size: 1.4rem;
   line-height: 1.8;
 }
-/* line 461, ../sass/style.scss */
+/* line 504, ../sass/style.scss */
 .contact-me-intro::before {
   content: 'mobile';
   display: none;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 442, ../sass/style.scss */
+  /* line 485, ../sass/style.scss */
   .contact-me-intro {
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -499,7 +550,7 @@ contactMe section
     -webkit-transition: -webkit-transform 0.6s, opacity 0.6s;
     transition: transform 0.6s, opacity 0.6s;
   }
-  /* line 478, ../sass/style.scss */
+  /* line 521, ../sass/style.scss */
   .is-tour .contact-me-intro {
     opacity: 0;
     -moz-transform: translateX(-50%);
@@ -507,23 +558,23 @@ contactMe section
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
-  /* line 482, ../sass/style.scss */
+  /* line 525, ../sass/style.scss */
   .contact-me-intro h1 {
     font-size: 4rem;
   }
-  /* line 485, ../sass/style.scss */
+  /* line 528, ../sass/style.scss */
   .contact-me-intro p {
     font-size: 1.6rem;
     padding: 10px 0 44px;
     margin: 0;
   }
-  /* line 490, ../sass/style.scss */
+  /* line 533, ../sass/style.scss */
   .contact-me-intro::before {
     content: 'desktop';
   }
 }
 
-/* line 495, ../sass/style.scss */
+/* line 538, ../sass/style.scss */
 .intro-btn {
   display: inline-block;
   width: 120px;
@@ -538,12 +589,12 @@ contactMe section
   color: #ffffff;
   background-color: #685f99;
 }
-/* line 513, ../sass/style.scss */
+/* line 556, ../sass/style.scss */
 .no-touch .intro-btn:hover {
   background-color: #756da4;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 495, ../sass/style.scss */
+  /* line 538, ../sass/style.scss */
   .intro-btn {
     width: 190px;
     height: 60px;
