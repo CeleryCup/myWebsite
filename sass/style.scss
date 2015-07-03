@@ -39,11 +39,17 @@ $L:     1170px;
  // Skill
  $color-skill: #F2EACF;
 
-// fonts 
+ //contactMe
+$color-1: #3d385a;
+$color-2: #ea4a55;
+$color-3: #ffffff;
+$section2-bg: #F2EACF;
 
+// fonts 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 $primary-font:'Bitter', serif;
 $secondary-font: 'PT Sans', sans-serif;
-
+$third-font:'Open Sans Condensed', sans-serif;
 /*
  *  1. Primary Style
  *  2. Intro
@@ -78,6 +84,212 @@ body {
 @include MQ(L) {
 	body, html{
 		overflow-x: hidden;
+	}
+}
+
+/*****************************
+
+AboutMe section
+
+******************************/
+.aboutMe-container{
+
+	position: relative;
+	width: 75%;
+	max-width: $L;
+	margin: 0 auto;
+	padding-top: 100px;
+	height: 100%;
+	
+	.info-pane{
+			
+		h1{
+			font:{
+				size: 6rem;
+				weight: bold;
+				family: $third-font;
+			}	
+		}
+		ul{
+			
+			max-width: 500px;
+			margin-top: 70px;
+
+			li {
+				list-style: none;
+				margin-top:15px;
+				padding: 10 5px;
+
+				.fa-map-marker {
+					margin-left: 5px;
+					margin-right: 6px;	
+				}
+				.fa-search{
+					margin-left: 2px;
+					margin-right: 3px;
+				}
+				span {
+					font:{
+						size: 1.6rem;
+						family: $secondary-font;
+					}
+
+				}
+			}	
+
+		}
+		@include MQ(L){
+			& {
+				position: absolute;
+				top: 45%;
+				@include transform(translateY(-50%));
+				height: 250px;
+			}
+			
+			h1{
+				
+				font-size: 8rem;
+				
+			}
+
+			ul li {
+				.fa, span {
+					font-size: 2.2rem;
+				}
+				.fa-map-marker{
+					margin-right: 12px;
+				}
+				.fa-search {
+					margin-right: 7px;	
+				}
+			}
+			
+
+		}
+	}
+
+	.timeline-pane{
+		position: relative;
+		@include MQ(L){
+			position: absolute;
+			top: 45%;
+			left: 60%;
+			width: 500px;
+			@include transform(translateY(-50%))
+		}
+		
+		#timeline{
+			position: relative;
+			padding-left: 30px;
+			border-left: 8px solid white;
+			li {
+				position: relative;
+				margin: 40px 0;
+			}
+			p{
+				margin: 40px 20px 10px 20px;
+			}
+			.date {
+				position: absolute;
+				left: -150px;
+				font-size: 1.5rem;
+				line-height: 25px;
+				top: 50%;
+				margin-top: -10px;
+
+			}
+			.circle {
+				position: absolute;
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: $section2-bg;
+				border: 5px solid white;
+				border-radius: 50%;
+				top: 50%;
+				margin-top: -10px;
+				left: -44px;
+			}
+			.content {
+				position: relative;
+				max-height: 40px;
+				border: 2px solid transparent;
+				border-radius: 0.8rem;
+
+				&::before, &::after {
+					content: '';
+					width: 0;
+					height: 0;
+					border: solid transparent;
+					position: absolute;
+					pointer-events: none;
+					right: 100%;
+				}
+				&::before{
+					border-right-color: inherit;
+					border-width: 20px;
+					top: 50%;
+					margin-top: -20px;
+
+				}
+
+				&::after{
+					border-right-color: $section2-bg;
+					border-width: 17px;
+					top: 50%;
+					margin-top: -17px;
+
+				}
+				p{
+					color: transparent;
+					text-align: justify;
+					hyphens: auto;
+					overflow: hidden;
+				}
+			}
+
+			label{
+				position: absolute;
+				z-index: 10;
+				font-size: 2rem;
+				cursor: pointer;
+				top: 10px;
+				@include transition(all 0.2s linear);
+			}
+
+			.radio{ 
+				 display: none;
+
+				&:checked {
+					& + .relative {
+						label{
+							cursor: auto;
+							@include transform(translateX(42px));
+						}
+						.circle{
+							background: #6DBFEF;
+						}
+					}
+					& ~ .content {
+
+						max-height: 300px;
+						border-color: lighten(#FCB052, 10%);
+						margin-right: 20px;
+						@include transform(translateX(20px));
+						@include transition(max-height 0.4s linear);
+
+						p {
+							max-height: 200px;
+							color: black;	
+							@include transition(color 0.5s linear);
+						}
+					}
+				}
+			}	
+
+
+		}
+
 	}
 }
 
@@ -175,35 +387,140 @@ Skill section
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
+
+/*****************************
+
+moreAboutMe section
+
+******************************/
+
+.info-container{
+	width: 90%;
+	position: relative;
+	margin: 0 auto;
+	border: 1px solid red;
+
+	ul {
+		margin: 200px auto;
+		max-width: 600px;
+
+
+		li {
+			display: inline-block;
+			font-size: 3rem;
+			padding: 5px;
+			margin: 15px 10px 0 0;	
+		}
+	}
+}
+
+/*****************************
+
+contactMe section
+
+******************************/
+
+.contact-me-container {
+	position: relative;
+	width: 90%;
+	max-width: $L;
+	margin: 0 auto;
+	border: 1px solid red;
+
+	@include MQ(L) {
+		padding-top: 100px;
+		height: 100vh;
+		&.is-tour {
+			height: auto;
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.contact-me-intro {
+	padding: 50px 0;
+	text-align: center;
+
+	h1 {
+		margin-bottom: 10px;
+		font-size: 2.5rem;
+		font-weight: 700;
+		font-family: $secondary-font;
+		color: $color-3;
+	}
+	p{
+		max-width: 560px;
+		margin:0 auto;
+		padding: 0 0 20px;
+		font-size: 1.4rem;
+		line-height: 1.8;
+	}
+
+	&::before{
+		content: 'mobile';
+		display: none;
+	}
+
+	@include MQ(L) {
+		@include transform(translateZ(0));
+		@include backface-visibility(hidden);
+
+		position: absolute;
+		top: 200px;
+		left:0;
+		width: 50%;
+		padding: 0;
+		text-align: left;
+		@include transition(transform .6s, opacity .6s);
+
+		.is-tour &{
+			opacity: 0;
+			@include transform(translateX(-50%));
+		}
+		h1{
+			font-size: 4rem;
+		}
+		p{
+			font-size: 1.6rem;
+			padding:10px 0 44px;
+			margin: 0;
+		}
+		&::before{
+			content: 'desktop';
+		}
+	}
+}
+.intro-btn{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 8px;
+	text:{
+		align: center;
+		transform: uppercase;
+	}
+	font:{
+		weight: bold;
+		size: 1.2rem;
+		family: $secondary-font;
+	}
+	color: $color-3;
+	background-color: lighten($color-1, 20%);
+
+	.no-touch &:hover {
+		background-color: lighten($color-1, 25%);
+	}
+
+	@include MQ(L) {
+		width: 190px;
+		height: 60px;
+		line-height: 60px;
+		margin-right: 15px;
+		font-size: 1.4rem;
+		letter-spacing: 2px;
+	}
+}
 

@@ -9,6 +9,8 @@
 
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
 	<link rel="stylesheet" href="stylesheets/animate.css">
 	<link rel="stylesheet" href="stylesheets/style.css"> <!-- Resource style -->
@@ -29,11 +31,69 @@
     	Some section
     </div>
 
-    <div class="section" id="aboutMe">
-    	Some section
+    <div class="section active" id="aboutMe">
+    	<div class="aboutMe-container">
+	    	<div class="info-pane">
+	    		<h1>About Me</h1>
+	    		<ul>
+		    		<li><i class="fa fa-graduation-cap"></i> <span>Graduated from University of Arizona</span></li>
+		    		<li><i class="fa fa-map-marker"></i>   <span>  Living in San Jose</span></li>
+		    		<li><i class="fa fa-search"></i>  <span>Looking for a job of Front-end developer!</span></li>
+	    		</ul>
+	    	</div>
+
+	    	<div class="timeline-pane">
+	    		<ul id="timeline">
+	    			<li class="work">
+	    				<input type="radio" class="radio" id="work3" name="works" checked>
+	    				<div class="relative">
+	    					<label for="work3">Full Stack Developer <span>@Vivalnk</span></label>
+	    					<span class="date">Jan 20 2015</span>
+	    					<span class="circle"></span>
+	    				</div>
+	    				<div class="content">
+	    					<p>
+		    					working in a company named viavalnk. Built a website and a control system that can no tbe ljlsjf aslfj asflfaj lsjfl sal ajfsa alsjfl
+		    					asfdljsf
+		    					sadfjlsjf
+		    					asdfjlsajd
+	    					</p>
+	    				</div>
+	    			</li>
+
+	    			<li class="work">
+	    				<input type="radio" class="radio" id="work2" name="works">
+	    				<div class="relative">
+	    					<label for="work2">Front End Developer <span>@MerchInc</span></label>
+	    					<span class="date">Nov 1 2015</span>
+	    					<span class="circle"></span>
+	    				</div>
+	    				<div class="content">
+	    					<p>
+		    					working in a company named merch.
+	    					</p>
+	    				</div>
+	    			</li>
+
+	    			<li class="work">
+	    				<input type="radio" class="radio" id="work1" name="works">
+	    				<div class="relative">
+	    					<label for="work1">Graduate Student <span>@UA</span></label>
+	    					<span class="date">Aug 15 2014</span>
+	    					<span class="circle"></span>
+	    				</div>
+	    				<div class="content">
+	    					<p>
+		    					Master degree in Mechanical Engineering with Computer Engineering Minor. Research was to develop algorithm in Solid Mechanics numerical calculation. Have a greate interest in Web Development.
+	    					</p>
+	    				</div>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    </div>
     </div>
     
-    <div class="section active" id="skill">
+    <div class="section" id="skill">
     	
     	<div class="skill-container">
     		<h1>I am ...</h1>
@@ -82,9 +142,49 @@
     <div class="section" id="projects">
     	Some section
     </div>
-    <div class="section" id="contactMe">
-    	Some section
+    <div class="section" id="moreAboutMe">
+    	<div class="info-container">
+    		<ul>
+    			<li><i class="fa fa-check-square-o"></i> Sushi</li>
+    			<li><i class="fa fa-code"></i></i> Clean Code</li>
+    			<li><i class="fa fa-heart-o"></i> Santa Cruz</li>
+    			<li><i class="fa fa-map-marker"></i> Pier 39</li>
+    			<li><i class="fa fa-pencil-square-o"></i> <a href="http://www.jianshu.com/users/188467a22cdc/latest_articles" target="_blank">writing blogs</a></li>
+    			<li><i class="fa fa-book"></i> reading</li>
+    			<li><i class="fa fa-heart-o"></i> Game of Thrones</li>
+    			<li class="dislike"><i class="fa fa-bug"></i> <del>Bugs</del></li>
+    			<li><i class="fa fa-github"></i> <a href="https://github.com/CeleryCup" target="_blank">github</a></li>
+    			<li class="dislike"><del>Jade templating</del></li>
+    			<li><i class="fa fa-circle-o"></i> running</li>
+    			<li><i class="fa fa-heart-o"></i> badmiton</li>
+    			<li class="dislike"><del>101 highway</del></li>
+    			<li><i class="fa fa-cutlery"></i> Cooking</li>
+    			<li><i class="fa fa-car"></i> Traveling</li>
+    			<li><i class="fa fa-linkedin-square"></i></i> Linkedin</li>
+    		</ul>
+    	</div>
     </div>
+
+    <div class="section" id="contactMe">
+    	<div class="contact-me-container">
+	    	<div class="contact-me-intro">
+	    		<h1>Keep in touch!</h1>
+	    		<p>If you ever need a developer, I'm just a phone call away</p>
+	    		<div class="triggers">
+	    			<a href="#" class="intro-btn">Download Resume</a>
+	    			<a href="#contactMeTour" class="intro-btn" id="contactMeBtn">Contact Me</a>
+	    		</div>
+
+	    		<div class="contact-me-form" id="contact-me-tour" >
+	    			<img src="img/form.png" alt="Preview image">
+	    			<div class="form-right-side"></div>
+	    			<div class="form-bottom-side"></div>
+	    		</div>
+	    		<a href="#" class="close-form-icon"></a>
+	    	</div>
+	    </div>
+	</div>
+
 </div>
 
 </body>
