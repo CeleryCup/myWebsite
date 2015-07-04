@@ -436,8 +436,11 @@ moreAboutMe section
 
 
 	ul {
+
+		background: white;
 		margin: 50px auto;
 		max-width: 800px;
+		border: 10px solid #CBC7CF;	
 		
 		li {
 			display: inline-block;
@@ -445,7 +448,7 @@ moreAboutMe section
 			padding: 5px;
 			margin: 15px 10px 0 0;
 			font-family: $secondary-font;
-
+			color: black;
 			a{
 				text-decoration: none;
 			}	
@@ -453,6 +456,11 @@ moreAboutMe section
 	}
 
 	@include MQ(L){
+		ul {
+			height: 400px;
+			padding: 50px;
+			
+		}
 		h1{
 			font-size: 6rem;
 		}

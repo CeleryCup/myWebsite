@@ -455,23 +455,31 @@ moreAboutMe section
 }
 /* line 438, ../sass/style.scss */
 .info-container ul {
+  background: white;
   margin: 50px auto;
   max-width: 800px;
+  border: 10px solid #CBC7CF;
 }
-/* line 442, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 .info-container ul li {
   display: inline-block;
   font-size: 3rem;
   padding: 5px;
   margin: 15px 10px 0 0;
   font-family: "PT Sans", sans-serif;
+  color: black;
 }
-/* line 449, ../sass/style.scss */
+/* line 452, ../sass/style.scss */
 .info-container ul li a {
   text-decoration: none;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 456, ../sass/style.scss */
+  /* line 459, ../sass/style.scss */
+  .info-container ul {
+    height: 400px;
+    padding: 50px;
+  }
+  /* line 464, ../sass/style.scss */
   .info-container h1 {
     font-size: 6rem;
   }
@@ -482,7 +490,7 @@ moreAboutMe section
 contactMe section
 
 ******************************/
-/* line 468, ../sass/style.scss */
+/* line 476, ../sass/style.scss */
 .contact-me-container {
   position: relative;
   width: 90%;
@@ -491,24 +499,24 @@ contactMe section
   border: 1px solid red;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 468, ../sass/style.scss */
+  /* line 476, ../sass/style.scss */
   .contact-me-container {
     padding-top: 100px;
     height: 100vh;
   }
-  /* line 478, ../sass/style.scss */
+  /* line 486, ../sass/style.scss */
   .contact-me-container.is-tour {
     height: auto;
     padding-bottom: 100px;
   }
 }
 
-/* line 485, ../sass/style.scss */
+/* line 493, ../sass/style.scss */
 .contact-me-intro {
   padding: 50px 0;
   text-align: center;
 }
-/* line 489, ../sass/style.scss */
+/* line 497, ../sass/style.scss */
 .contact-me-intro h1 {
   margin-bottom: 10px;
   font-size: 2.5rem;
@@ -516,7 +524,7 @@ contactMe section
   font-family: "PT Sans", sans-serif;
   color: #ffffff;
 }
-/* line 496, ../sass/style.scss */
+/* line 504, ../sass/style.scss */
 .contact-me-intro p {
   max-width: 560px;
   margin: 0 auto;
@@ -524,13 +532,13 @@ contactMe section
   font-size: 1.4rem;
   line-height: 1.8;
 }
-/* line 504, ../sass/style.scss */
+/* line 512, ../sass/style.scss */
 .contact-me-intro::before {
   content: 'mobile';
   display: none;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 485, ../sass/style.scss */
+  /* line 493, ../sass/style.scss */
   .contact-me-intro {
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -550,7 +558,7 @@ contactMe section
     -webkit-transition: -webkit-transform 0.6s, opacity 0.6s;
     transition: transform 0.6s, opacity 0.6s;
   }
-  /* line 521, ../sass/style.scss */
+  /* line 529, ../sass/style.scss */
   .is-tour .contact-me-intro {
     opacity: 0;
     -moz-transform: translateX(-50%);
@@ -558,23 +566,23 @@ contactMe section
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
-  /* line 525, ../sass/style.scss */
+  /* line 533, ../sass/style.scss */
   .contact-me-intro h1 {
     font-size: 4rem;
   }
-  /* line 528, ../sass/style.scss */
+  /* line 536, ../sass/style.scss */
   .contact-me-intro p {
     font-size: 1.6rem;
     padding: 10px 0 44px;
     margin: 0;
   }
-  /* line 533, ../sass/style.scss */
+  /* line 541, ../sass/style.scss */
   .contact-me-intro::before {
     content: 'desktop';
   }
 }
 
-/* line 538, ../sass/style.scss */
+/* line 546, ../sass/style.scss */
 .intro-btn {
   display: inline-block;
   width: 120px;
@@ -589,12 +597,12 @@ contactMe section
   color: #ffffff;
   background-color: #685f99;
 }
-/* line 556, ../sass/style.scss */
+/* line 564, ../sass/style.scss */
 .no-touch .intro-btn:hover {
   background-color: #756da4;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 538, ../sass/style.scss */
+  /* line 546, ../sass/style.scss */
   .intro-btn {
     width: 190px;
     height: 60px;
