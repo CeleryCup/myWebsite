@@ -1,9 +1,47 @@
 $(document).ready(function() {
 
+    // to ensure the moreaboutme panel only show once
 	var hasLoaded = false;
+    var firstTime = true;
     $('.info-container ul > li').each(function(){
        $(this).hide();
-    })
+    });
+
+
+    $("body").append('<audio id="sound" preload="auto"><source src="audio/uptownfunk.ogg" type="audio/ogg"/><source src="audio/uptownfunk.mp3" type="audio/mp3" /></audio>')
+    var sound = $('#sound').get(0);
+
+    // var music_reset = function(){
+    //     sound.pause();
+    //     img.css('left', '-200px');
+    // };
+
+    // var music_start = function(){
+    //     sound.play();
+    //     img.animate({left: parseInt($("body").width())}, animationDuratin, music_reset);
+    // };
+
+    // $('#playMusic').click(function(){
+    //     music_start();
+    // });
+
+    $('#playMusic').click(function(){
+        var pic = $('#nodding');
+        if (firstTime === true) {
+           pic.addClass('showpic');
+            firstTime = false;
+            sound.play();
+        } else {
+            pic.toggleClass('showpic noshowpic');
+            if(pic.hasClass('showpic')) {
+                sound.play();
+            } else {    
+                sound.pause();
+            }
+        }
+        
+    }); 
+
 
     $('#fullpage').fullpage({
     	'verticalCentered': false,
@@ -33,12 +71,23 @@ $(document).ready(function() {
 			    });
 
 			    $('h2').mouseout(function(){
-			    	var selected = $(this).next();
-			    	setTimeout(function(){
-			    		selected.css('opacity', 1);
-			    	}, 600);
+                    var that = $(this);
+                    var list = $(this).parent().find('.skill-list');
+                    list.removeClass('visible');
+                    list.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+                        function(e) {
+                        if(!list.hasClass('visible')) {
+                            that.next().css('opacity', 1);
+                        }                       
+
+
+                    });
+			    	// var selected = $(this).next();
+			    	// setTimeout(function(){
+			    	// 	selected.css('opacity', 1);
+			    	// }, 600);
 			    	
-					$(this).parent().find('.skill-list').removeClass('visible');
+					
 			    });
 
 
