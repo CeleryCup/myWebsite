@@ -42,6 +42,17 @@ $(document).ready(function() {
         
     }); 
 
+    $('#cd-start').click(function(e){
+            e.preventDefault();
+            $('.cd-product').addClass('is-product-tour');
+            $('.cd-close-product-tour').addClass('is-visible');
+    });
+
+    $('.cd-close-product-tour').click(function(){
+        $('.cd-product').removeClass('is-product-tour');
+        $('.cd-close-product-tour').removeClass('is-visible');
+    })
+
 
     $('#fullpage').fullpage({
     	'verticalCentered': false,
@@ -110,6 +121,29 @@ $(document).ready(function() {
     			})
     		}
     	}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

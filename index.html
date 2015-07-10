@@ -104,9 +104,9 @@
     			<p class="text-change">HTML5/CSS3,JavaScript,jQuery,Sass/Less,Compass</p>
     			<div class="skill-list">
     				<ul>
-    					<li>HTML5/CSS</li>
+    					<li>HTML5/CSS3</li>
     					<li>JavaScript</li>
-    					<li>jQueryjQuery</li>
+    					<li>jQuery</li>
     					<li>Sass/Less</li>
     					<li>Compass</li>
     				</ul>
@@ -115,23 +115,25 @@
 
 			<div class="skill-column">
 				<h2>Good At</h2>
-				<p class="text-change">AngularJs, Test</p>
+				<p class="text-change">Nodejs, Express, Angular, MongoDB</p>
 				<div class="skill-list">
 					<ul>
-						<li>AngularJS</li>
-						<li>Test</li>
+						<li>Nodejs</li>
+						<li>Express</li>
+						<li>Angular</li>
+						<li>MongoDB</li>
 						
 					</ul>
 				</div>
 			</div>
 			<div class="skill-column">
 				<h2>Currently learning</h2>
-				<p class="text-change">NodeJS, MongoDB</p>
+				<p class="text-change">Grunt, Phantomjs, Mocha</p>
 				<div class="skill-list">
 					<ul>
-						<li>NodeJS</li>
-						<li>Express</li>
-						<li>MongoDB</li>
+						<li>Grunt</li>
+						<li>Phantomjs</li>
+						<li>Mocha</li>
 						
 					</ul>
 				</div>
@@ -168,24 +170,57 @@
     	</div>
     </div>
 
-    <div class="section" id="contactMe">
-    	<div class="contact-me-container">
-	    	<div class="contact-me-intro">
-	    		<h1>Keep in touch!</h1>
-	    		<p>If you ever need a developer, I'm just a phone call away</p>
-	    		<div class="triggers">
-	    			<a href="#" class="intro-btn">Download Resume</a>
-	    			<a href="#contactMeTour" class="intro-btn" id="contactMeBtn">Contact Me</a>
-	    		</div>
+    <div class="section active" id="contactMe">
+    	<section class="cd-product">
+			<div class="cd-product-intro">
+				<h1>Keep in touch!</h1>
+				<p>If you ever need a front-end developer, I am just a phone call away.</p>
+				<div class="cd-triggers">
+					<a href="#" class="cd-btn">Download Resume</a>
+					<a href="#cd-product-tour" id="cd-start" class="cd-btn">Contact Me</a>
+				</div>
+			</div> <!-- cd-product-intro -->
 
-	    		<div class="contact-me-form" id="contact-me-tour" >
-	    			<img src="img/form.png" alt="Preview image">
-	    			<div class="form-right-side"></div>
-	    			<div class="form-bottom-side"></div>
-	    		</div>
-	    		<a href="#" class="close-form-icon"></a>
-	    	</div>
-	    </div>
+			<div id="cd-product-tour" class="cd-product-mockup">
+				<!-- <img src="img/form.png" alt="Preview image"> -->
+				<div class="form-container">
+					<h2> 
+					<form action="http://formspree.io/liqiang372@gmail.com" method="POST" class="cd-form floating-labels">
+						<fieldset class="fieldset1">
+						<div class="icon">
+							<label class="cd-label" for="cd-textarea">Project description</label>
+			      			<textarea class="message" name="cd-textarea" id="cd-textarea" placeholder="Write me something..."required></textarea>
+						</div>	
+						</fieldset>
+
+						<fieldset>
+						<div class="icon">
+							<label class="cd-label" for="cd-name">Name</label>
+							<input class="user" type="text" name="cd-name" id="cd-name" placeholder="Name" required>
+						</div>
+
+						<div class="icon">
+		    				<label class="cd-label" for="cd-company">Company</label>
+							<input class="company" type="text" name="cd-company" placeholder="Company" id="cd-company" required>
+		    			</div> 
+
+						<div class="icon">
+		    				<label class="cd-label" for="cd-email">Email</label>
+							<input class="email" type="email" name="cd-email" id="cd-email" placeholder="Email"required>
+		   				 </div>
+		   				 </fieldset>
+		   				 <div>
+		      				<input type="submit" value="Send Message">
+					    </div>
+					</form>	
+				</div>
+				
+
+				<div class="cd-3d-right-side"></div>
+				<div class="cd-3d-bottom-side"></div>
+			</div> <!-- .cd-product-mockup -->
+			<a href="#0" class="cd-close-product-tour cd-img-replace"></a>
+	</section> <!-- .cd-product -->
 	</div>
 
 </div>
