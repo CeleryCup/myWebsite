@@ -74,33 +74,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
  *  3. AboutMe
  *  4. Skill
  *  5. Projects
- *  6. Contact Me
+ *  6. More about me
+ *  7. Contact Me
  */
 /* ---------------------------
 
 Primary style
 
 ------------------------------*/
-/* line 70, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 *, *::after, *::before {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 body {
   font-size: 1.6rem;
   font-family: "Bitter", serif;
 }
 
 @media only screen and (min-width: 1170px) {
-  /* line 86, ../sass/style.scss */
+  /* line 91, ../sass/style.scss */
   body, html {
     overflow-x: hidden;
   }
@@ -110,7 +111,7 @@ body {
 Nodding img
 
 ******************************/
-/* line 97, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
 #nodding {
   width: 200px;
   position: absolute;
@@ -119,13 +120,13 @@ Nodding img
   z-index: 99;
   border-radius: 50%;
 }
-/* line 105, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 #nodding.noshowpic {
   -moz-animation: slideUp 1s ease-out;
   -webkit-animation: slideUp 1s ease-out;
   animation: slideUp 1s ease-out;
 }
-/* line 110, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 #nodding.showpic {
   -moz-animation: slideDown 1s ease-in forwards;
   -webkit-animation: slideDown 1s ease-in forwards;
@@ -239,7 +240,7 @@ Nodding img
 AboutMe section
 
 ******************************/
-/* line 165, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 .aboutMe-container {
   position: relative;
   width: 75%;
@@ -248,40 +249,40 @@ AboutMe section
   padding-top: 100px;
   height: 100%;
 }
-/* line 176, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 .aboutMe-container .info-pane h1 {
   font-size: 6rem;
   font-weight: bold;
   font-family: "Open Sans Condensed", sans-serif;
 }
-/* line 183, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .aboutMe-container .info-pane ul {
   max-width: 500px;
   margin-top: 70px;
 }
-/* line 188, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 .aboutMe-container .info-pane ul li {
   list-style: none;
   margin-top: 15px;
   padding: 10 5px;
 }
-/* line 193, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 .aboutMe-container .info-pane ul li .fa-map-marker {
   margin-left: 5px;
   margin-right: 6px;
 }
-/* line 197, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .aboutMe-container .info-pane ul li .fa-search {
   margin-left: 2px;
   margin-right: 3px;
 }
-/* line 201, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 .aboutMe-container .info-pane ul li span {
   font-size: 1.6rem;
   font-family: "PT Sans", sans-serif;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 212, ../sass/style.scss */
+  /* line 217, ../sass/style.scss */
   .aboutMe-container .info-pane {
     position: absolute;
     top: 45%;
@@ -291,29 +292,29 @@ AboutMe section
     transform: translateY(-50%);
     height: 250px;
   }
-  /* line 219, ../sass/style.scss */
+  /* line 224, ../sass/style.scss */
   .aboutMe-container .info-pane h1 {
     font-size: 8rem;
   }
-  /* line 226, ../sass/style.scss */
+  /* line 231, ../sass/style.scss */
   .aboutMe-container .info-pane ul li .fa, .aboutMe-container .info-pane ul li span {
     font-size: 2.2rem;
   }
-  /* line 229, ../sass/style.scss */
+  /* line 234, ../sass/style.scss */
   .aboutMe-container .info-pane ul li .fa-map-marker {
     margin-right: 12px;
   }
-  /* line 232, ../sass/style.scss */
+  /* line 237, ../sass/style.scss */
   .aboutMe-container .info-pane ul li .fa-search {
     margin-right: 7px;
   }
 }
-/* line 241, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .aboutMe-container .timeline-pane {
   position: relative;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 241, ../sass/style.scss */
+  /* line 246, ../sass/style.scss */
   .aboutMe-container .timeline-pane {
     position: absolute;
     top: 45%;
@@ -325,22 +326,22 @@ AboutMe section
     transform: translateY(-50%);
   }
 }
-/* line 251, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline {
   position: relative;
   padding-left: 30px;
   border-left: 8px solid white;
 }
-/* line 255, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline li {
   position: relative;
   margin: 40px 0;
 }
-/* line 259, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline p {
   margin: 40px 20px 10px 20px;
 }
-/* line 262, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .date {
   position: absolute;
   left: -145px;
@@ -350,7 +351,7 @@ AboutMe section
   margin-top: -10px;
   font-family: "PT Sans", sans-serif;
 }
-/* line 272, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .circle {
   position: absolute;
   display: block;
@@ -363,14 +364,14 @@ AboutMe section
   margin-top: -10px;
   left: -44px;
 }
-/* line 284, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content {
   position: relative;
   max-height: 40px;
   border: 2px solid transparent;
   border-radius: 0.8rem;
 }
-/* line 290, ../sass/style.scss */
+/* line 295, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content::before, .aboutMe-container .timeline-pane #timeline .content::after {
   content: '';
   width: 0;
@@ -380,28 +381,28 @@ AboutMe section
   pointer-events: none;
   right: 100%;
 }
-/* line 299, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content::before {
   border-right-color: inherit;
   border-width: 20px;
   top: 50%;
   margin-top: -20px;
 }
-/* line 307, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content::after {
   border-right-color: #EAAB28;
   border-width: 17px;
   top: 50%;
   margin-top: -17px;
 }
-/* line 314, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .content p {
   color: transparent;
   text-align: justify;
   hyphens: auto;
   overflow: hidden;
 }
-/* line 322, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline label {
   position: absolute;
   z-index: 10;
@@ -414,11 +415,11 @@ AboutMe section
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-/* line 333, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio {
   display: none;
 }
-/* line 338, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked + .relative label {
   cursor: auto;
   -moz-transform: translateX(42px);
@@ -426,11 +427,11 @@ AboutMe section
   -webkit-transform: translateX(42px);
   transform: translateX(42px);
 }
-/* line 342, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked + .relative .circle {
   background: red;
 }
-/* line 346, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked ~ .content {
   max-height: 300px;
   border-color: black;
@@ -444,7 +445,7 @@ AboutMe section
   -webkit-transition: max-height 0.4s linear;
   transition: max-height 0.4s linear;
 }
-/* line 354, ../sass/style.scss */
+/* line 359, ../sass/style.scss */
 .aboutMe-container .timeline-pane #timeline .radio:checked ~ .content p {
   max-height: 200px;
   color: #4d4d4d;
@@ -459,7 +460,7 @@ AboutMe section
 Skill section
 
 ******************************/
-/* line 376, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 .skill-container {
   position: relative;
   width: 90%;
@@ -468,13 +469,13 @@ Skill section
   padding-top: 100px;
   heigth: 100%;
 }
-/* line 384, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .skill-container h1 {
   font-size: 8rem;
   text-align: center;
   color: white;
 }
-/* line 391, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .skill-container .skill-column {
   display: inline-block;
   position: relative;
@@ -483,7 +484,7 @@ Skill section
   text-align: center;
   vertical-align: top;
 }
-/* line 401, ../sass/style.scss */
+/* line 406, ../sass/style.scss */
 .skill-container h2 {
   display: inline-block;
   width: 60%;
@@ -498,42 +499,42 @@ Skill section
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 411, ../sass/style.scss */
+/* line 416, ../sass/style.scss */
 .skill-container h2:hover {
   color: white;
   background: #990000;
 }
-/* line 417, ../sass/style.scss */
+/* line 422, ../sass/style.scss */
 .skill-container p {
   font-family: "PT Sans", sans-serif;
   padding: 50px 0;
   font-size: 3rem;
   opacity: 1;
 }
-/* line 424, ../sass/style.scss */
+/* line 429, ../sass/style.scss */
 .skill-container .skill-list {
   display: none;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 428, ../sass/style.scss */
+  /* line 433, ../sass/style.scss */
   .skill-container .skill-column {
     width: 33%;
     margin-top: 5%;
     height: 500px;
   }
-  /* line 433, ../sass/style.scss */
+  /* line 438, ../sass/style.scss */
   .skill-container h2 {
     width: 90%;
   }
-  /* line 436, ../sass/style.scss */
+  /* line 441, ../sass/style.scss */
   .skill-container p {
     margin-top: 50px;
   }
-  /* line 440, ../sass/style.scss */
+  /* line 445, ../sass/style.scss */
   .skill-container .skill-list {
     display: block;
   }
-  /* line 443, ../sass/style.scss */
+  /* line 448, ../sass/style.scss */
   .skill-container .skill-list ul {
     position: absolute;
     left: 10%;
@@ -548,13 +549,13 @@ Skill section
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  /* line 451, ../sass/style.scss */
+  /* line 456, ../sass/style.scss */
   .skill-container .skill-list ul li {
     font-size: 3rem;
     margin-top: 1.5rem;
     font-family: "PT Sans", sans-serif;
   }
-  /* line 459, ../sass/style.scss */
+  /* line 464, ../sass/style.scss */
   .skill-container .skill-list.visible ul {
     opacity: 1;
     left: 50%;
@@ -563,17 +564,171 @@ Skill section
 
 /*****************************
 
+Projecgt section
+
+******************************/
+/* line 492, ../sass/style.scss */
+.projects-container {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 492, ../sass/style.scss */
+  .projects-container {
+    width: 70%;
+  }
+}
+
+/* line 502, ../sass/style.scss */
+.grid-item {
+  position: relative;
+  margin: 5px 10px;
+}
+/* line 507, ../sass/style.scss */
+.grid-item img {
+  -moz-transition: all, 0.7s;
+  -o-transition: all, 0.7s;
+  -webkit-transition: all, 0.7s;
+  transition: all, 0.7s;
+  width: 100px;
+  height: 50px;
+}
+/* line 512, ../sass/style.scss */
+.grid-item img.hoverOn {
+  -webkit-filter: blur(2px) brightness(40%);
+  filter: blur(2px) brightness(40%);
+}
+@media only screen and (min-width: 600px) {
+  /* line 507, ../sass/style.scss */
+  .grid-item img {
+    width: 150px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  /* line 507, ../sass/style.scss */
+  .grid-item img {
+    width: 250px;
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  /* line 507, ../sass/style.scss */
+  .grid-item img {
+    width: 300px;
+    height: 200px;
+  }
+}
+/* line 531, ../sass/style.scss */
+.grid-item .info {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  height: 90%;
+  color: white;
+  text-align: center;
+  -moz-transition: all, 0.7s;
+  -o-transition: all, 0.7s;
+  -webkit-transition: all, 0.7s;
+  transition: all, 0.7s;
+}
+/* line 543, ../sass/style.scss */
+.grid-item .info h3 {
+  background: black;
+  display: block;
+  padding: 8px;
+}
+/* line 549, ../sass/style.scss */
+.grid-item .info p {
+  margin-top: 5%;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 549, ../sass/style.scss */
+  .grid-item .info p {
+    line-height: 20px;
+  }
+}
+/* line 557, ../sass/style.scss */
+.grid-item .info a {
+  color: white;
+}
+/* line 560, ../sass/style.scss */
+.grid-item .info a:hover {
+  color: tomato;
+}
+/* line 564, ../sass/style.scss */
+.grid-item .info.showInfo {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 573, ../sass/style.scss */
+#projects h1 {
+  padding-top: 50px;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: white;
+}
+/* line 582, ../sass/style.scss */
+#projects ul {
+  margin: 40px 0;
+}
+/* line 584, ../sass/style.scss */
+#projects ul li {
+  display: inline-block;
+}
+/* line 587, ../sass/style.scss */
+#projects ul a {
+  text-decoration: none;
+  background: #c86d61;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  color: white;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+  font-size: 1.3rem;
+  width: 80px;
+  height: 30px;
+  padding: 8px 16px;
+}
+/* line 596, ../sass/style.scss */
+#projects ul a:hover {
+  background: #d69086;
+}
+@media only screen and (min-width: 1600px) {
+  /* line 587, ../sass/style.scss */
+  #projects ul a {
+    font-size: 2rem;
+    width: 100px;
+    height: 40px;
+    padding: 10px 20px;
+  }
+}
+
+/*****************************
+
 moreAboutMe section
 
 ******************************/
-/* line 489, ../sass/style.scss */
+/* line 628, ../sass/style.scss */
 .info-container {
   width: 90%;
   position: relative;
   margin: 0 auto;
   border: 1px solid transparent;
 }
-/* line 495, ../sass/style.scss */
+/* line 634, ../sass/style.scss */
 .info-container h1 {
   margin: 100px auto 0;
   max-width: 800px;
@@ -582,14 +737,14 @@ moreAboutMe section
   font-weight: bold;
   font-family: "Open Sans Condensed", sans-serif;
 }
-/* line 508, ../sass/style.scss */
+/* line 647, ../sass/style.scss */
 .info-container ul {
   background: white;
   margin: 50px auto;
   max-width: 800px;
   border: 10px solid #CBC7CF;
 }
-/* line 515, ../sass/style.scss */
+/* line 654, ../sass/style.scss */
 .info-container ul li {
   display: inline-block;
   font-size: 3rem;
@@ -598,25 +753,25 @@ moreAboutMe section
   font-family: "PT Sans", sans-serif;
   color: black;
 }
-/* line 522, ../sass/style.scss */
+/* line 661, ../sass/style.scss */
 .info-container ul li a {
   text-decoration: none;
 }
-/* line 528, ../sass/style.scss */
+/* line 667, ../sass/style.scss */
 .info-container #playmMusic {
   color: #ffb9ad;
 }
-/* line 530, ../sass/style.scss */
+/* line 669, ../sass/style.scss */
 .info-container #playmMusic:hover {
   color: tomato;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 536, ../sass/style.scss */
+  /* line 675, ../sass/style.scss */
   .info-container ul {
     height: 400px;
     padding: 50px;
   }
-  /* line 541, ../sass/style.scss */
+  /* line 680, ../sass/style.scss */
   .info-container h1 {
     font-size: 6rem;
   }
@@ -627,7 +782,7 @@ moreAboutMe section
 contactMe section
 
 ******************************/
-/* line 552, ../sass/style.scss */
+/* line 691, ../sass/style.scss */
 .cd-img-replace {
   /* replace text with background images */
   display: inline-block;
@@ -636,7 +791,7 @@ contactMe section
   white-space: nowrap;
 }
 
-/* line 560, ../sass/style.scss */
+/* line 699, ../sass/style.scss */
 .cd-btn {
   display: inline-block;
   width: 120px;
@@ -651,12 +806,12 @@ contactMe section
   color: #ffffff;
   background-color: #685f99;
 }
-/* line 578, ../sass/style.scss */
+/* line 717, ../sass/style.scss */
 .no-touch .cd-btn:hover {
   background-color: #756da4;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 560, ../sass/style.scss */
+  /* line 699, ../sass/style.scss */
   .cd-btn {
     width: 190px;
     height: 60px;
@@ -667,7 +822,7 @@ contactMe section
   }
 }
 
-/* line 594, ../sass/style.scss */
+/* line 733, ../sass/style.scss */
 .cd-product {
   position: relative;
   width: 90%;
@@ -675,24 +830,24 @@ contactMe section
   margin: 0 auto;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 594, ../sass/style.scss */
+  /* line 733, ../sass/style.scss */
   .cd-product {
     padding-top: 100px;
     height: 100vh;
   }
-  /* line 605, ../sass/style.scss */
+  /* line 744, ../sass/style.scss */
   .cd-product.is-product-tour {
     height: auto;
     padding-bottom: 100px;
   }
 }
 
-/* line 613, ../sass/style.scss */
+/* line 752, ../sass/style.scss */
 .cd-product-intro {
   padding: 50px 0;
   text-align: center;
 }
-/* line 617, ../sass/style.scss */
+/* line 756, ../sass/style.scss */
 .cd-product-intro h1 {
   margin-bottom: 10px;
   font-size: 4rem;
@@ -700,7 +855,7 @@ contactMe section
   font-family: "Open Sans Condensed", sans-serif;
   color: #ffffff;
 }
-/* line 626, ../sass/style.scss */
+/* line 765, ../sass/style.scss */
 .cd-product-intro p {
   max-width: 560px;
   margin: 0 auto;
@@ -709,17 +864,17 @@ contactMe section
   line-height: 1.8;
   color: #a29cc2;
 }
-/* line 636, ../sass/style.scss */
+/* line 775, ../sass/style.scss */
 .cd-product-intro::before {
   content: 'mobile';
   display: none;
 }
-/* line 640, ../sass/style.scss */
+/* line 779, ../sass/style.scss */
 .cd-product-intro a {
   text-decoration: none;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 613, ../sass/style.scss */
+  /* line 752, ../sass/style.scss */
   .cd-product-intro {
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -739,7 +894,7 @@ contactMe section
     -webkit-transition: -webkit-transform 0.6s, opacity 0.6s;
     transition: transform 0.6s, opacity 0.6s;
   }
-  /* line 656, ../sass/style.scss */
+  /* line 795, ../sass/style.scss */
   .is-product-tour .cd-product-intro {
     opacity: 0;
     -moz-transform: translateX(-50%);
@@ -747,23 +902,23 @@ contactMe section
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
-  /* line 660, ../sass/style.scss */
+  /* line 799, ../sass/style.scss */
   .cd-product-intro h1 {
     font-size: 6rem;
   }
-  /* line 663, ../sass/style.scss */
+  /* line 802, ../sass/style.scss */
   .cd-product-intro p {
     font-size: 2rem;
     padding: 10px 0 44px;
     margin: 0;
   }
-  /* line 668, ../sass/style.scss */
+  /* line 807, ../sass/style.scss */
   .cd-product-intro::before {
     content: 'desktop';
   }
 }
 
-/* line 674, ../sass/style.scss */
+/* line 813, ../sass/style.scss */
 .cd-product-mockup {
   width: 90%;
   max-width: 600px;
@@ -774,24 +929,24 @@ contactMe section
   height: 500px;
   width: 300px;
 }
-/* line 685, ../sass/style.scss */
+/* line 824, ../sass/style.scss */
 .cd-product-mockup .form-container {
   position: relative;
   width: 290px;
   height: 100%;
   margin: 0 auto;
 }
-/* line 692, ../sass/style.scss */
+/* line 831, ../sass/style.scss */
 .cd-product-mockup .form-container .cd-label {
   display: block;
   opacity: 0;
 }
-/* line 698, ../sass/style.scss */
+/* line 837, ../sass/style.scss */
 .cd-product-mockup .form-container input, .cd-product-mockup .form-container textarea, .cd-product-mockup .form-container label {
   font-size: 1.6rem;
   font-family: "Bitter", serif;
 }
-/* line 703, ../sass/style.scss */
+/* line 842, ../sass/style.scss */
 .cd-product-mockup .form-container input[type="text"],
 .cd-product-mockup .form-container input[type="email"],
 .cd-product-mockup .form-container textarea {
@@ -800,7 +955,7 @@ contactMe section
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-/* line 711, ../sass/style.scss */
+/* line 850, ../sass/style.scss */
 .cd-product-mockup .form-container input[type="text"],
 .cd-product-mockup .form-container input[type="email"],
 .cd-product-mockup .form-container textarea {
@@ -812,7 +967,7 @@ contactMe section
   border-radius: .25em;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
-/* line 722, ../sass/style.scss */
+/* line 861, ../sass/style.scss */
 .cd-product-mockup .form-container input[type="text"]:focus,
 .cd-product-mockup .form-container input[type="email"]:focus,
 .cd-product-mockup .form-container textarea:focus {
@@ -820,17 +975,17 @@ contactMe section
   border-color: #ffffff;
   box-shadow: 0 0 5px rgba(234, 74, 85, 0.2);
 }
-/* line 729, ../sass/style.scss */
+/* line 868, ../sass/style.scss */
 .cd-product-mockup .form-container .user {
   margin-top: 10px;
 }
-/* line 732, ../sass/style.scss */
+/* line 871, ../sass/style.scss */
 .cd-product-mockup .form-container textarea {
   min-height: 200px;
   resize: vertical;
   overflow: auto;
 }
-/* line 737, ../sass/style.scss */
+/* line 876, ../sass/style.scss */
 .cd-product-mockup .form-container input[type="submit"] {
   /* button style */
   border: none;
@@ -848,44 +1003,44 @@ contactMe section
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-/* line 752, ../sass/style.scss */
+/* line 891, ../sass/style.scss */
 .no-touch .cd-product-mockup .form-container input[type="submit"]:hover {
   background: #ed616a;
 }
-/* line 756, ../sass/style.scss */
+/* line 895, ../sass/style.scss */
 .cd-product-mockup .form-container input[type="submit"]:focus {
   outline: none;
   background: #3d385a;
 }
-/* line 761, ../sass/style.scss */
+/* line 900, ../sass/style.scss */
 .cd-product-mockup .form-container input[type="submit"]:active {
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
-/* line 767, ../sass/style.scss */
+/* line 906, ../sass/style.scss */
 .cd-product-mockup .form-container .icon input, .cd-product-mockup .form-container .icon textarea {
   padding-left: 45px !important;
 }
-/* line 772, ../sass/style.scss */
+/* line 911, ../sass/style.scss */
 .cd-product-mockup .form-container [required].user {
   background: url("../img/cd-icon-user.svg") no-repeat 10px center;
 }
-/* line 776, ../sass/style.scss */
+/* line 915, ../sass/style.scss */
 .cd-product-mockup .form-container [required].company {
   background: url("../img/cd-icon-company.svg") no-repeat 10px center;
 }
-/* line 782, ../sass/style.scss */
+/* line 921, ../sass/style.scss */
 .cd-product-mockup .form-container [required].email {
   background: url("../img/cd-icon-email.svg") no-repeat 10px center;
 }
-/* line 787, ../sass/style.scss */
+/* line 926, ../sass/style.scss */
 .cd-product-mockup .form-container .message {
   background: url("../img/cd-icon-message.svg") no-repeat 10px 10px;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 674, ../sass/style.scss */
+  /* line 813, ../sass/style.scss */
   .cd-product-mockup {
     margin-bottom: 0;
     /* Force Hardware Acceleration in WebKit */
@@ -913,7 +1068,7 @@ contactMe section
     transition: transform 0.6s;
   }
 }
-/* line 810, ../sass/style.scss */
+/* line 949, ../sass/style.scss */
 .cd-product-mockup::before {
   /* mockup shadow */
   display: block;
@@ -933,14 +1088,14 @@ contactMe section
   -webkit-transition: -webkit-transform 0.6s;
   transition: transform 0.6s;
 }
-/* line 824, ../sass/style.scss */
+/* line 963, ../sass/style.scss */
 .is-product-tour .cd-product-mockup {
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
-/* line 827, ../sass/style.scss */
+/* line 966, ../sass/style.scss */
 .is-product-tour .cd-product-mockup::before {
   -moz-transform: translateZ(-100px) translateX(226px) translateY(216px);
   -ms-transform: translateZ(-100px) translateX(226px) translateY(216px);
@@ -948,12 +1103,12 @@ contactMe section
   transform: translateZ(-100px) translateX(226px) translateY(216px);
 }
 
-/* line 835, ../sass/style.scss */
+/* line 974, ../sass/style.scss */
 .cd-3d-right-side, .cd-3d-bottom-side {
   display: none;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 835, ../sass/style.scss */
+  /* line 974, ../sass/style.scss */
   .cd-3d-right-side, .cd-3d-bottom-side {
     display: block;
     position: absolute;
@@ -961,7 +1116,7 @@ contactMe section
     background-image: url(../img/form.png);
     outline: 1px solid transparent;
   }
-  /* line 844, ../sass/style.scss */
+  /* line 983, ../sass/style.scss */
   .cd-3d-right-side::after, .cd-3d-bottom-side::after {
     /* darken the right/bottom sides */
     content: '';
@@ -976,7 +1131,7 @@ contactMe section
 }
 
 @media only screen and (min-width: 1170px) {
-  /* line 858, ../sass/style.scss */
+  /* line 997, ../sass/style.scss */
   .cd-3d-right-side {
     top: -1px;
     width: 10px;
@@ -992,7 +1147,7 @@ contactMe section
     transform: translateZ(-1px) translateY(1px) rotateY(-90deg);
   }
 
-  /* line 868, ../sass/style.scss */
+  /* line 1007, ../sass/style.scss */
   .cd-3d-bottom-side {
     bottom: 0;
     width: 100%;
@@ -1008,17 +1163,17 @@ contactMe section
     -webkit-transform: translateZ(-1px) rotateX(-90deg);
     transform: translateZ(-1px) rotateX(-90deg);
   }
-  /* line 876, ../sass/style.scss */
+  /* line 1015, ../sass/style.scss */
   .cd-3d-bottom-side::after {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-/* line 883, ../sass/style.scss */
+/* line 1022, ../sass/style.scss */
 .cd-close-product-tour {
   display: none;
 }
 @media only screen and (min-width: 1170px) {
-  /* line 883, ../sass/style.scss */
+  /* line 1022, ../sass/style.scss */
   .cd-close-product-tour {
     display: block;
     position: absolute;
@@ -1029,11 +1184,11 @@ contactMe section
     opacity: 0;
     visibility: hidden;
   }
-  /* line 895, ../sass/style.scss */
+  /* line 1034, ../sass/style.scss */
   .no-touch .cd-close-product-tour:hover {
     opacity: .8;
   }
-  /* line 899, ../sass/style.scss */
+  /* line 1038, ../sass/style.scss */
   .cd-close-product-tour::after, .cd-close-product-tour::before {
     /* these are used to create the X icon*/
     content: '';
@@ -1044,21 +1199,21 @@ contactMe section
     top: 50%;
     background-color: #ffffff;
   }
-  /* line 910, ../sass/style.scss */
+  /* line 1049, ../sass/style.scss */
   .cd-close-product-tour::after {
     -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
-  /* line 913, ../sass/style.scss */
+  /* line 1052, ../sass/style.scss */
   .cd-close-product-tour::before {
     -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
     -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
     -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
     transform: translateX(-50%) translateY(-50%) rotate(-45deg);
   }
-  /* line 916, ../sass/style.scss */
+  /* line 1055, ../sass/style.scss */
   .cd-close-product-tour.is-visible {
     visibility: visible;
     opacity: 1;

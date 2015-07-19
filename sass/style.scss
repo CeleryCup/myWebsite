@@ -16,7 +16,8 @@
 // break points
 $S:     480px;   
 $M:     600px;     
-$L:     1170px;     
+$L:     1170px;    
+$XL:    1600px; 
 
 // media queries
 
@@ -29,6 +30,9 @@ $L:     1170px;
   }
   @else if $canvas == L {
    @media only screen and (min-width: $L) { @content; } 
+  }
+  @else if $canvas == XL {
+   @media only screen and (min-width: $XL) { @content; } 
   }
 }
 
@@ -57,7 +61,8 @@ $third-font:'Open Sans Condensed', sans-serif;
  *  3. AboutMe
  *  4. Skill
  *  5. Projects
- *  6. Contact Me
+ *  6. More about me
+ *  7. Contact Me
  */
 
 
@@ -477,6 +482,140 @@ Skill section
 	}
 
 
+}
+
+/*****************************
+
+Projecgt section
+
+******************************/
+.projects-container {
+	width: 90%;
+	position: relative;
+	margin: 0 auto;
+
+	@include MQ(XL){
+		width: 70%;
+	}
+}
+
+.grid-item {
+	position: relative;
+	
+	margin: 5px 10px;
+
+	img{
+		@include transition(all, 0.7s);
+
+		width: 100px;
+		height: 50px;
+		&.hoverOn{
+			@include filter(blur(2px) brightness(40%));
+		}
+		@include MQ(M){
+			width: 150px;
+			height: 100px;
+		}
+		
+		@include MQ(L){
+			width: 250px;
+			height: 150px;
+		}
+		@include MQ(XL){
+			width: 300px;
+			height: 200px;
+		}
+
+	}
+
+	.info{
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		@include transform(translateX(-50%));
+		width: 100%;
+		height: 90%;
+		color: white;
+		text-align:center;
+		@include transition(all, 0.7s);
+		h3{
+			background:black;
+			display:block;
+			
+			padding: 8px;
+		}
+		p{
+			margin-top: 5%;
+
+			@include MQ(XL){
+				line-height: 20px;
+			}
+			
+		}
+		a{
+			color: white;
+
+			&:hover{
+				color: tomato;
+			}
+		}
+		&.showInfo{
+			visibility: visible;
+			opacity: 1;
+		}
+
+	}
+}
+#projects {
+	
+	h1{		
+			padding-top: 50px;
+			font:{
+				size: 6rem;
+				weight: bold;
+				family: $third-font;
+			}	
+			color: white;
+		}
+	ul{
+		margin: 40px 0;
+		li{
+			display: inline-block;
+		}
+		a{
+		text-decoration: none;
+		background: lighten(#B74D3F, 10%);
+		font:{
+			family: $secondary-font;
+			size: 1rem;
+		}
+		color: white;
+
+		&:hover{
+			background: lighten(#B74D3F, 20%);
+		}
+		@include transition(all, 0.3s);
+		
+
+	
+		font-size: 1.3rem;
+		width: 80px;
+		height: 30px;
+		padding: 8px 16px;
+		
+		@include MQ(XL){
+			font-size: 2rem;
+			width: 100px;
+			height: 40px;
+			padding: 10px 20px;
+		}
+		
+	}
+	}
+	
+	
 }
 
 
