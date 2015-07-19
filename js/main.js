@@ -11,19 +11,6 @@ $(document).ready(function() {
     $("body").append('<audio id="sound" preload="auto"><source src="audio/uptownfunk.ogg" type="audio/ogg"/><source src="audio/uptownfunk.mp3" type="audio/mp3" /></audio>')
     var sound = $('#sound').get(0);
 
-    // var music_reset = function(){
-    //     sound.pause();
-    //     img.css('left', '-200px');
-    // };
-
-    // var music_start = function(){
-    //     sound.play();
-    //     img.animate({left: parseInt($("body").width())}, animationDuratin, music_reset);
-    // };
-
-    // $('#playMusic').click(function(){
-    //     music_start();
-    // });
 
     $('#playMusic').click(function(){
         var pic = $('#nodding');
@@ -51,7 +38,35 @@ $(document).ready(function() {
     $('.cd-close-product-tour').click(function(){
         $('.cd-product').removeClass('is-product-tour');
         $('.cd-close-product-tour').removeClass('is-visible');
+    });
+
+    // setting up projects layout
+    var $grid= $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+    });
+
+    $('#projects ul li a').click(function(){
+        var data = $(this).data('filter');
+        if(data){
+            $grid.isotope({filter: '.' + data});
+        }
+        else {
+            $grid.isotope({filter: '*'});
+        }
+        
+    });
+    // setting up projects image description
+    $('.grid-item').mouseover(function(){
+        $(this).find('img').addClass('hoverOn');
+        $(this).find('.info').addClass('showInfo');
+
+    });
+    $('.grid-item').mouseout(function(){
+        $(this).find('img').removeClass('hoverOn');
+        $(this).find('.info').removeClass('showInfo');
     })
+
 
 
     $('#fullpage').fullpage({
@@ -93,14 +108,10 @@ $(document).ready(function() {
 
 
                     });
-			    	// var selected = $(this).next();
-			    	// setTimeout(function(){
-			    	// 	selected.css('opacity', 1);
-			    	// }, 600);
+
 			    	
 					
 			    });
-
 
     		}
 
@@ -121,31 +132,6 @@ $(document).ready(function() {
     			})
     		}
     	}
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     });
 });
