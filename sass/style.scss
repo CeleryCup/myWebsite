@@ -494,6 +494,7 @@ Skill section
 		}
 	.skill-list{ 
 		display: block;
+
 		
 		ul {
 			position: absolute;
@@ -631,15 +632,19 @@ Projecgt section
 			padding: 8px;
 		}
 		p{
+			display: none;
 			margin-top: 5%;
+			color: #cccccc;
 
-			@include MQ(XL){
+			@include MQ(L){
 				line-height: 20px;
+				display: inline;
 			}
 			
 		}
 		a{
-			color: white;
+			color: #cccccc;
+			text-decoration: none;
 
 			&:hover{
 				color: tomato;
@@ -655,18 +660,21 @@ Projecgt section
 #projects {
 	
 	h1{		
-			padding-top: 50px;
+			padding-top: 30px;
 			font:{
-				size: 6rem;
+				size: 4rem;
 				weight: bold;
 				family: $third-font;
 			}	
 			color: white;
 		}
 	ul{
-		margin: 40px 0;
+		margin: 10px 0;
 		li{
 			display: inline-block;
+			vertical-align: middle;
+			margin-top: 20px;
+
 		}
 		a{
 		text-decoration: none;
@@ -697,6 +705,17 @@ Projecgt section
 		}
 		
 	}
+	}
+
+	@include MQ(M){
+		h1{
+			padding-top: 30px;
+			font-size: 6rem;
+		}
+		ul{
+			margin: 40px 0;
+			
+		}
 	}
 	
 	
