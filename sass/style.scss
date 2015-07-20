@@ -14,10 +14,10 @@
 /* Responsive design */
 
 // break points
-$S:     480px;   
-$M:     600px;     
-$L:     1170px;    
-$XL:    1600px; 
+$S:     480px;   // IPHONE
+$M:     768px;   // IPAD
+$L:     1170px;  // LAPTOP
+$XL:    1600px;  // DESKTOP
 
 // media queries
 
@@ -52,9 +52,13 @@ $section2-bg: #EAAB28;
 
 // fonts 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 $primary-font:'Bitter', serif;
 $secondary-font: 'PT Sans', sans-serif;
 $third-font:'Open Sans Condensed', sans-serif;
+
+
+
 /*
  *  1. Primary Style
  *  2. Intro
@@ -120,6 +124,7 @@ Nodding img
 
 	
 }
+// Animation for nodding picture
 @include keyframes(slideDown){
 		0% {
 			top: -150px;
@@ -162,6 +167,9 @@ Nodding img
 	}
 }
 
+
+
+
 /*****************************
 
 AboutMe section
@@ -171,16 +179,21 @@ AboutMe section
 
 	position: relative;
 	width: 75%;
-	max-width: $L;
 	margin: 0 auto;
-	padding-top: 100px;
+	padding-top: 10px;
 	height: 100%;
+
+	@include MQ(M){
+		padding-top: 100px;
+	}
+
+
 	
 	.info-pane{
 			
 		h1{
 			font:{
-				size: 6rem;
+				size: 4rem;
 				weight: bold;
 				family: $third-font;
 			}	
@@ -188,7 +201,7 @@ AboutMe section
 		ul{
 			
 			max-width: 500px;
-			margin-top: 70px;
+			margin-top: 20px;
 
 			li {
 				list-style: none;
@@ -211,6 +224,22 @@ AboutMe section
 
 				}
 			}	
+
+		}
+
+		@include MQ(M){
+			h1{
+				font-size: 6rem;
+			}
+			ul{
+				margin-top: 70px;
+
+				li{
+					span{
+						font-size: 1.6rem;
+					}
+				}
+			}
 
 		}
 		@include MQ(L){
@@ -255,42 +284,37 @@ AboutMe section
 		
 		#timeline{
 			position: relative;
-			padding-left: 30px;
-			border-left: 8px solid white;
+			padding-left: 20px;
+			border-left: 6px solid white;
 			li {
 				position: relative;
-				margin: 40px 0;
+				margin: 15px 0;
 			}
 			p{
 				margin: 40px 20px 10px 20px;
 			}
 			.date {
-				position: absolute;
-				left: -145px;
-				font-size: 1.5rem;
-				line-height: 25px;
-				top: 50%;
-				margin-top: -10px;
-				font-family:$secondary-font;
+				visibility: hidden;
 
 			}
 			.circle {
 				position: absolute;
 				display: block;
-				width: 20px;
-				height: 20px;
+				width: 18px;
+				height: 18px;
 				background: $section2-bg;
 				border: 5px solid white;
 				border-radius: 50%;
 				top: 50%;
 				margin-top: -10px;
-				left: -44px;
+				left: -32px;
 			}
 			.content {
 				position: relative;
 				max-height: 40px;
 				border: 2px solid transparent;
 				border-radius: 0.8rem;
+				
 
 				&::before, &::after {
 					content: '';
@@ -327,9 +351,9 @@ AboutMe section
 			label{
 				position: absolute;
 				z-index: 10;
-				font-size: 2.2rem;
+				font-size: 1.7rem;
 				cursor: pointer;
-				top: 10px;
+				top: 20px;
 				font-family:$secondary-font;
 
 				@include transition(all 0.2s linear);
@@ -363,6 +387,40 @@ AboutMe section
 						}
 					}
 				}
+			}
+
+			@include MQ(M){
+				padding-left: 30px;
+				border-left: 8px solid white;
+				li{
+					margin: 40px 0;
+				}
+
+				.date {
+					visibility: visible;
+					position: absolute;
+					left: -145px;
+					font-size: 1.5rem;
+					line-height: 25px;
+					top: 50%;
+					margin-top: -10px;
+					font-family:$secondary-font;
+
+				}
+				.circle{
+					width: 20px;
+					height: 20px;
+					left: -44px;
+				}
+
+				label{
+					font-size: 2.2rem;
+					top: 10px;
+				}
+				span.newline{
+					display:none;
+				}
+
 			}	
 
 
@@ -466,6 +524,8 @@ Skill section
 					left: 50%;
 
 				}
+
+
 			}
 			
 
