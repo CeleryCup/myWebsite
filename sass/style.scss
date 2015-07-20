@@ -16,7 +16,7 @@
 // break points
 $S:     480px;   // IPHONE
 $M:     768px;   // IPAD
-$L:     1170px;  // LAPTOP
+$L:     1024px;  // LAPTOP
 $XL:    1600px;  // DESKTOP
 
 // media queries
@@ -441,11 +441,15 @@ Skill section
 	width: 90%;
 	max-width: $L;
 	margin: 0 auto;
-	padding-top: 100px;
+	padding-top: 10px;
+
+	@include MQ(L){
+		padding-top: 100px;
+	}
 	
 	heigth: 100%;	
 	h1 {
-		font-size: 8rem;
+		font-size: 6rem;
 		text-align: center;
 		color: white;
 		//border: 1px solid yellow;
@@ -455,88 +459,108 @@ Skill section
 			display: inline-block;
 			position: relative;
 			width: 100%;
-			padding-top: 50px;
+			padding-top: 30px;
 			text-align: center;
 			vertical-align:top;
 			
 
-	}
-	h2{
-			display: inline-block;
-			width: 60%;
-			font-size: 4rem;
-			color: #656E79;
-			background: #E9F0F5;
-			border-radius: 5px;
-			padding: 10px 0;
-			font-family: $secondary-font;
-			@include transition(all 0.5s ease-in-out);
-			&:hover{
-				color: white;
-				background: darken(red, 20%);
+
 			
+
+	}
+	h2 {
+		display: inline-block;
+		width: 60%;
+		font-size: 2rem;
+		color: #656E79;
+		background: #E9F0F5;
+		border-radius: 5px;
+		padding: 10px 0;
+		font-family: $secondary-font;
+		@include transition(all 0.5s ease-in-out);
+		&:hover{
+			color: white;
+			background: darken(red, 20%);
+		
+		}
+	}
+
+	p{
+		font-family: $secondary-font;
+		padding: 20px 0;
+		
+		font-size: 3rem;
+		opacity: 1;
+		}
+	.skill-list{ 
+		display: block;
+		
+		ul {
+			position: absolute;
+			left: 10%;
+			top: 50%;
+			width: 60%;
+			opacity: 0;
+			@include transform(translateX(-50%));
+			@include transition(all 0.5s ease-in-out);
+
+			li {
+				display: inline-block;
+				float:left;
+				font-size: 1.5rem;
+				margin-top: 1.5rem;
+				font-family: $secondary-font;
+				margin-right: 0.5rem;
 			}
 		}
-	p{
-			font-family: $secondary-font;
-			
-			padding: 50px 0;
-			font-size: 3rem;
-			opacity: 1;
+
+		&.visible {
+			ul {
+				opacity: 1;
+				left: 50%;
+			}
+
 		}
-	.skill-list{
-		display:none;
+		
 	}
+	&::before{
+			content: 'mobile';
+			display: none;
+	}
+
+	
 	@include MQ(L) {
 		.skill-column {	
 			width: 33%;
 			margin-top: 5%;
 			height: 500px;
+
+		}
+		h1{
+			font-size: 8rem;
 		}
 		h2{
+			font-size: 4rem;
 			width: 90%;
 		}
 		p{
 			margin-top: 50px;
+			padding: 50px 0;
 		}
 
-		.skill-list{ 
-			display:block;
-			
-			ul {
-				position: absolute;
-				left: 10%;
+		.skill-list{
+			ul{
+				
+				width: 100px;
 				top: 150px;
-				opacity: 0;
-				@include transform(translateX(-50%));
-				@include transition(all 0.5s ease-in-out);
 
-				li {
-				font-size: 3rem;
-				margin-top: 1.5rem;
-				font-family: $secondary-font;
+				li{
+					font-size: 3rem;
 				}
 			}
-
-			&.visible {
-				ul {
-					opacity: 1;
-					left: 50%;
-
-				}
-
-
-			}
 			
-
-
-			
-
-
-			
-		
-
 		}
+
 
 
 	}

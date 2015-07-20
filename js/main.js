@@ -80,7 +80,6 @@ $(document).ready(function() {
     	'afterLoad': function(anchorLink, index) {
 
     		if(index == 3) {
-
     			// add the morphtext effect
     			$(".text-change").Morphext({
 			        animation: "fadeInUp",
@@ -88,15 +87,15 @@ $(document).ready(function() {
 			           // console.log("This is called after a phrase is animated in! Current phrase index: " + this.index);
 			        }
 			    });
-
 			    // show full list of skills
-			    $('h2').mouseenter(function(){
+			    $('h2').mouseover(function(){
+                    
 			    	var selected = $(this).next();
 			    	selected.css('opacity' , 0);
 			    	$(this).parent().find('.skill-list').addClass('visible');
 			    });
-
 			    $('h2').mouseout(function(){
+                   
                     var that = $(this);
                     var list = $(this).parent().find('.skill-list');
                     list.removeClass('visible');
