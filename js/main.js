@@ -29,15 +29,15 @@ $(document).ready(function() {
         
     }); 
 
-    $('#cd-start').click(function(e){
+    $('#info-start').click(function(e){
             e.preventDefault();
-            $('.cd-product').addClass('is-product-tour');
-            $('.cd-close-product-tour').addClass('is-visible');
+            $('.contact-me').addClass('showpanel');
+            $('.closepanel').addClass('is-visible');
     });
 
-    $('.cd-close-product-tour').click(function(){
-        $('.cd-product').removeClass('is-product-tour');
-        $('.cd-close-product-tour').removeClass('is-visible');
+    $('.closepanel').click(function(){
+        $('.contact-me').removeClass('showpanel');
+        $('.closepanel').removeClass('is-visible');
     });
 
     // setting up projects layout

@@ -183,8 +183,9 @@ AboutMe section
 	padding-top: 10px;
 	height: 100%;
 
-	@include MQ(M){
+	@include MQ(XL){
 		padding-top: 100px;
+		width: 60%;
 	}
 
 
@@ -465,8 +466,6 @@ Skill section
 			
 
 
-			
-
 	}
 	h2 {
 		display: inline-block;
@@ -485,7 +484,7 @@ Skill section
 		}
 	}
 
-	p{
+	p{	
 		font-family: $secondary-font;
 		padding: 20px 0;
 		
@@ -552,8 +551,8 @@ Skill section
 		.skill-list{
 			ul{
 				
-				width: 100px;
-				top: 150px;
+				width: 120px;
+				top: 120px;
 
 				li{
 					font-size: 3rem;
@@ -571,7 +570,7 @@ Skill section
 
 /*****************************
 
-Projecgt section
+Projects section
 
 ******************************/
 .projects-container {
@@ -587,7 +586,7 @@ Projecgt section
 .grid-item {
 	position: relative;
 	
-	margin: 5px 10px;
+	margin: 5px 10px 5px 0;
 
 	img{
 		@include transition(all, 0.7s);
@@ -672,7 +671,7 @@ Projecgt section
 		margin: 10px 0;
 		li{
 			display: inline-block;
-			vertical-align: middle;
+
 			margin-top: 20px;
 
 		}
@@ -733,9 +732,9 @@ moreAboutMe section
 	position: relative;
 	margin: 0 auto;
 	border: 1px solid transparent;
-
+	
 	h1{
-		margin: 100px auto 0;
+		margin: 30px auto 0;
 		max-width: 800px;
 		text-align: left;
 		font:{
@@ -750,15 +749,15 @@ moreAboutMe section
 	ul {
 
 		background: white;
-		margin: 50px auto;
+		margin: 20px auto;
 		max-width: 800px;
 		border: 10px solid #CBC7CF;	
 		
 		li {
 			display: inline-block;
-			font-size: 3rem;
+			font-size: 2rem;
 			padding: 5px;
-			margin: 15px 10px 0 0;
+			margin: 10px 5px 0 0;
 			font-family: $secondary-font;
 			color: black;
 			a{
@@ -767,17 +766,29 @@ moreAboutMe section
 		}
 	}
 
-	#playmMusic{
-		color: lighten(tomato, 20%);
+	#playMusic{
+		color: #551A8B;
 		&:hover{
-			color: tomato;
+			cursor: pointer;
+
+
 		}
 	}
 
-	@include MQ(L){
+
+	@include MQ(M){
+		h1{
+			margin: 100px auto 0;
+		}
 		ul {
+			margin: 50px auto;
 			height: 400px;
 			padding: 50px;
+
+			li{
+				font-size: 3rem;
+				margin: 15px 10px 0 0;
+			}
 			
 		}
 		h1{
@@ -799,8 +810,9 @@ contactMe section
 	white-space: nowrap;
 }
 
-.cd-btn{
-	display: inline-block;
+.info-btn{
+	display: none;
+	horizontal-align: bottom;
 	width: 120px;
 	height: 40px;
 	line-height: 40px;
@@ -820,7 +832,9 @@ contactMe section
 	.no-touch &:hover{
 		background-color: lighten($color-1, 25%);
 	}
-
+	@include MQ(M){
+		display: inline-block;
+	}
 	@include MQ(L){
 		width: 190px;
 		height: 60px;
@@ -833,7 +847,7 @@ contactMe section
 }
 
 
-.cd-product {
+.contact-me {
 
 	position: relative;
 	width: 90%;
@@ -844,7 +858,7 @@ contactMe section
 		padding-top: 100px;
 		height: 100vh;
 
-		&.is-product-tour{
+		&.showpanel{
 			height: auto;
 			padding-bottom: 100px;
 		}
@@ -852,7 +866,7 @@ contactMe section
 	}
 }
 
-.cd-product-intro{
+.contact-me-intro{
 	padding: 50px 0;
 	text-align: center;
 
@@ -883,6 +897,20 @@ contactMe section
 		text-decoration: none;
 	}
 
+	.callMe{
+		position: absolute;
+		bottom: -25%;
+		left: 50%;
+		@include transform(translateX(-50%));
+		.fa-phone-square{
+			font-size: 6rem;
+			color: lighten(#3D385A, 20%);
+		}
+		@include MQ(M){
+			display: none;
+		}
+	}
+
 	@include MQ(L){
 		@include transform(translateZ(0));
 		@include backface-visibility(hidden);
@@ -895,7 +923,7 @@ contactMe section
 		text-align: left;
 		@include transition(transform .6s, opacity .6s);
 
-		.is-product-tour &{
+		.showpanel &{
 			opacity: 0;
 			@include transform(translateX(-50%));
 		}
@@ -913,7 +941,11 @@ contactMe section
 	}
 }
 
-.cd-product-mockup{
+.contact-me-mockup{
+	display: none;
+	@include MQ(M) {
+		display: block;
+	}
 	width: 90%;
 	
 	max-width: 600px;
@@ -1063,7 +1095,7 @@ contactMe section
 		@include transition(transform .6s);
 	}
 
-	.is-product-tour &{
+	.showpanel &{
 		@include transform(translateX(0));
 
 		&::before{
@@ -1122,7 +1154,7 @@ contactMe section
 
 }
 
-.cd-close-product-tour{
+.closepanel{
 	display: none;
 	@include MQ(L){
 		display:block;
