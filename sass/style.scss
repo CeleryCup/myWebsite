@@ -97,6 +97,8 @@ body {
 	}
 }
 
+
+
 /*****************************
 
 Nodding img
@@ -169,6 +171,59 @@ Nodding img
 
 
 
+/*****************************
+
+Intro section
+
+******************************/
+
+.intro-container{
+	
+		position:relative;
+		margin:0 auto;
+		width: 90%;
+		height: 100%;
+		
+		.profile{
+			height: 500px;
+			width: 50%;
+			position: absolute;
+			left: 50%;
+			@include transform(translateX(-50%));
+			top: 25%;
+			text-align: center;	
+
+
+			img {
+				width: 150px;
+				height: 150px;
+				@include border-radius(50%);
+				@include MQ(M){
+					width: 200px;
+					height: 200px;
+				}
+			}
+
+			p{
+				
+				margin-top: 20px;
+				font:{
+					family: $secondary-font;
+					size: 2rem;
+					
+				}
+				color: lighten(#3C4F6A, 30%);
+				@include MQ(M){
+					font-size: 5rem;
+					margin-top: 40px;
+				}
+			}
+
+		}
+
+	
+
+}
 
 /*****************************
 
