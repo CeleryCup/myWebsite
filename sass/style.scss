@@ -97,7 +97,20 @@ body {
 	}
 }
 
+/*****************************
 
+preloading img
+
+******************************/
+
+.pre-loading{
+	position: fixed;
+	top: 50%;
+	left: 48%;
+
+	@include transform(translateX(-50%));
+	@include transform(translateY(-50%));
+}
 
 /*****************************
 
@@ -368,7 +381,7 @@ AboutMe section
 			.content {
 				position: relative;
 				max-height: 40px;
-				border: 2px solid transparent;
+				border: 3px solid transparent;
 				border-radius: 0.8rem;
 				
 
